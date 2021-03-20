@@ -5,6 +5,11 @@ const app = express();
 
 //connect to database
 connectDB();
+
+//Init Middlewear
+
+app.use(express.json({ extended: false}));
+
 //single end point to test
 app.get('/', (req, res) => res.send('API Running'));
 
